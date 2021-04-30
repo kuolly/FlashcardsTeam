@@ -9,13 +9,13 @@ const mongoose = require("mongoose");
 const sessions = require("express-session"); //для чтения сессии
 const MongoStore = require("connect-mongo"); // для хранения сессии в базе данных mongoDB
 
-async function read(err, data) { // model
-  if (err) {
-    throw err;
-  }
-  await Question.create({question: , answer: })
+// async function read(err, data) { // model
+//   if (err) {
+//     throw err;
+//   }
+//   await Question.create({question: , answer: })
 
-}
+// }
 
 serv.set("view engine", "hbs");
 serv.set("cookieName", "sid");
