@@ -1,28 +1,39 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
-h2 {
-  display: flex;
-  justify-content: center;
-}
-
 body {
   background-color: #ecc19c;
 }
 
-.entry-links {
+.qestForm {
+  padding: 100px;
+}
+
+.qest {
+  padding: 20px;
+}
+
+#qest {
+  width: 500px;
+  height: 100px;
+  text-align: center;
+}
+#answer {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+}
+
+.qestForm {
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
 }
-
-/* -----------------------------кнпоки---------------------------- */
-
-.shine-button {
+/* --------------кнопка--------- */
+#buttonQest {
   text-decoration: none;
   display: inline-block;
-  padding: 40px 60px;
+  padding: 5px 5px;
   margin: 50px 20px;
   border: black;
   position: relative;
@@ -33,7 +44,7 @@ body {
   color: #1e847f;
   transition: 0.2s ease-in-out;
 }
-.shine-button:before {
+#buttonQest:before {
   content: "";
   background: linear-gradient(
     90deg,
@@ -47,11 +58,11 @@ body {
   left: -75px;
   transform: skewX(-45deg);
 }
-.shine-button:hover {
+#buttonQest:hover {
   background: #1e847f;
   color: #fff;
 }
-.shine-button:hover:before {
+#buttonQest:hover:before {
   left: 150px;
   transition: 0.5s ease-in-out;
 }
