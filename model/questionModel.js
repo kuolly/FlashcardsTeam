@@ -6,6 +6,8 @@ const QuestionSchema = new Schema({
   count: Number
 });
 
-const questionModel = model("Question", QuestionSchema);
+const questionModel1 = model("Question", QuestionSchema);
+const questionModel2 = model("Question", QuestionSchema);
+const questionModel3 = model("Question", QuestionSchema);
 
-module.exports = questionModel;
+module.exports = {questionModel1, questionModel2, questionModel3};
