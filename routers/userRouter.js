@@ -2,14 +2,14 @@ const { Router } = require("express");
 const router = Router();
 const userModel = require("../model/user.model");
 const bcrypt = require("bcrypt");
-const QuestionModel = require("../model/questionModel")
+
 
 router.get("/signin", (req, res) => {
   res.render("signin");
 });
 
 router.get('/first', async (req, res) => {
-  const question = await QuestionModel.find();
+  const question = await 
   res.render("questionForm1", {question})
 })
 // router.post('/second', (req, res) => {
