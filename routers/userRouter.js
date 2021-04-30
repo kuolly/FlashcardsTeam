@@ -2,25 +2,26 @@ const { Router } = require("express");
 const router = Router();
 const userModel = require("../model/user.model");
 const bcrypt = require("bcrypt");
-
+const {questionModel1, questionModel2, questionModel3} = require("../model/questionModel")
 
 router.get("/signin", (req, res) => {
   res.render("signin");
 });
 
-router.get('/first', async (req, res) => {
-  const question = await 
-  res.render("questionForm1", {question})
+router.get('/first', (req, res) => {
+  const question1 = await questionModel1.find()
+  res.render("questionForm1", question1)
 })
-// router.post('/second', (req, res) => {
-  
-//   res.redirect('/second')
-// })
-// router.post('/third', (req, res) => {
-  
-//   res.redirect('/third')
-// })
 
+router.get('/second', (req, res) => {
+  const question2 = await questionModel2.find()
+  res.render("questionForm2", question2)
+})
+
+router.get('/third', (req, res) => {
+  const question3 = await questionModel3.find()
+  res.render("questionForm3", question3)
+})
 
 router.post("/signin", async (req, res) => {
   const { name, email, password } = req.body;
